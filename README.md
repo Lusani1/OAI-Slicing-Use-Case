@@ -28,7 +28,7 @@ The shared core includes:
 - `oai-udr`
 - `oai-smf`
 - `oai-smf2`
-- 
+  
 ### User plane
 The deployment includes three VPP-based UPFs:
 
