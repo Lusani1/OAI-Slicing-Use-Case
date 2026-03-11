@@ -57,7 +57,7 @@ It is handled by `oai-smf` and supports:
 
 - DNN `default`
 - DNN `oai.ipv4`
-- 
+  
 Associated UPFs:
 
 - `vpp-upf` for `default`
