@@ -1,0 +1,61 @@
+version: '3.8'
+services:
+    oai-smf:
+        container_name: "oai-smf"
+        image: oaisoftwarealliance/oai-smf:v2.1.0
+        expose:
+            - 80/tcp
+            - 8080/tcp
+            - 8805/udp
+        volumes:
+            - ./conf/basic_vpp_nrf_config_slice1.yaml:/openair-smf/etc/config.yaml
+        environment:
+            - TZ=Europe/Paris
+        extra_hosts:
+            - "vpp-upf2.node.5gcn.mnc95.mcc208.3gppnetwork.org:192.168.70.202"
+            - "vpp-upf.node.5gcn.mnc95.mcc208.3gppnetwork.org:192.168.70.201"
+
+        depends_on:
+            - oai-nrf
+        networks:
+            public_net:
+                ipv4_address: 192.168.70.133
+
+networks:
+    public_net:
+        driver: bridge
+        name: demo-oai-public-net
+        ipam:
+            config:
+                - subnet: 192.168.70.0/24
+        driver_opts:
+            com.docker.network.bridge.name: "demo-oai"
+    public_net_access:
+        name: oai-public-access
+        ipam:
+            config:
+                - subnet: 192.168.72.0/24
+        driver_opts:
+            com.docker.network.bridge.name: "cn5g-access"
+    public_net_core:
+        name: oai-public-core
+        ipam:
+            config:
+                - subnet: 192.168.73.0/24
+        driver_opts:
+            com.docker.network.bridge.name: "cn5g-core"
+    public_net_access2:
+        name: oai-public-access2
+        ipam:
+            config:
+                - subnet: 192.168.74.0/24
+        driver_opts:
+            com.docker.network.bridge.name: "cn5g-access2"
+
+    public_net_access3:
+        name: oai-public-access3
+        ipam:
+            config:
+                - subnet: 192.168.75.0/24
+        driver_opts:
+            com.docker.network.bridge.name: "cn5g-access3"
