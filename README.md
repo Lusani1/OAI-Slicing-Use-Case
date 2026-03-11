@@ -29,7 +29,7 @@ The shared core includes:
 - `oai-udr`
 - `oai-smf`
 - `oai-smf2`
----
+  
 The config for the shared control plane is `shared_control_functions.yaml`
   
 ### User plane
@@ -38,6 +38,7 @@ The deployment includes three VPP-based UPFs:
 - `vpp-upf`
 - `vpp-upf2`
 - `vpp-upf3`
+
 The configs for the user plane functions (edge nodes) are `upf1.yaml`, `upf2.yaml` and `upf3.yaml`.
 
 ### Access emulation
@@ -192,18 +193,30 @@ OAI-Slicing-Use-Case/
 ```
 ## File roles
 - `docker-compose-basic-vpp-nrf.yaml`
+  
 Deploys the shared core, SMFs, UPFs, and external data networks. 
+
 - `basic_vpp_nrf_config.yaml`
+  
 Shared AMF/NRF/UDM/UDR/AUSF configuration and AMF slice support. 
+
 - `basic_vpp_nrf_config_slice1.yaml`
+  
 SMF configuration for the slice with SST=1, SD=000001. 
+
 - `basic_vpp_nrf_config_slice2.yaml`
+  
 SMF configuration for the slice with SST=1, SD=000000. 
 - `docker-compose-ueransim-vpp_slice1_1.yaml`
+  
 UERANSIM deployment for Education Slice domain A. 
+
 - `docker-compose-ueransim-vpp_slice1_2.yaml`
+  
 UERANSIM deployment for Education Slice domain B. 
+
 - `docker-compose-ueransim-vpp_slice2.yaml`
+  
 UERANSIM deployment for the Telemedicine Slice.
 
 ## Prerequisites
