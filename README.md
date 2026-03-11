@@ -35,7 +35,7 @@ The deployment includes three VPP-based UPFs:
 - `vpp-upf`
 - `vpp-upf2`
 - `vpp-upf3`
-- 
+  
 ### Access emulation
 Three UERANSIM instances emulate geographically separated gNB/UE domains:
 
