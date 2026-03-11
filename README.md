@@ -5,7 +5,8 @@ Practical OpenAirInterface 5G Core network slicing use case using a **shared con
 ## Architecture Overview
 
 This repository implements a slicing scenario aligned to the attached architecture:
-<img width="973" height="518" alt="Screenshot from 2026-03-11 10-51-48" src="https://github.com/user-attachments/assets/f8153f24-4d9d-47ad-9d1f-aa5193720c39" />
+<img width="978" height="523" alt="Screenshot from 2026-03-11 11-51-36" src="https://github.com/user-attachments/assets/52815b8b-775a-4cad-b6c1-cc9a8c5ecb53" />
+
 
 
 - A **shared control plane** hosted in a central data centre
@@ -28,6 +29,7 @@ The shared core includes:
 - `oai-udr`
 - `oai-smf`
 - `oai-smf2`
+The config for the shared control plane is `shared_control_functions.yaml`
   
 ### User plane
 The deployment includes three VPP-based UPFs:
@@ -35,14 +37,15 @@ The deployment includes three VPP-based UPFs:
 - `vpp-upf`
 - `vpp-upf2`
 - `vpp-upf3`
-  
+The configs for the user plane functions (edge nodes) are `upf1.yaml`, `upf2.yaml` and `upf3.yaml`.
+
 ### Access emulation
 Three UERANSIM instances emulate geographically separated gNB/UE domains:
 
 - `ueransim`
 - `ueransim1`
 - `ueransim2` 
-
+The configs for the gNB/UE stacks are `docker-compose-ueransim-vpp_slice1_1.yaml`, `docker-compose-ueransim-vpp_slice1_2.yaml`, and `docker-compose-ueransim-vpp_slice2.yaml`.
 ---
 
 ## Slice Design
@@ -166,11 +169,17 @@ The deployment uses the following Docker networks:
 - `oai-public-core` → N6/core-facing network for external DNs 
 ---
 
-## Repository Structure
+## Repository Structure (For this use case)
 
 ```text
 OAI-Slicing-Use-Case/
-├── docker-compose-basic-vpp-nrf.yaml
+├── upf1.yaml
+├── upf2.yaml
+├── upf3.yaml
+├── dn1.yaml
+├── dn2.yaml
+├── dn3.yaml
+├──shared_control_functions.yaml
 ├── docker-compose-ueransim-vpp_slice1_1.yaml
 ├── docker-compose-ueransim-vpp_slice1_2.yaml
 ├── docker-compose-ueransim-vpp_slice2.yaml
