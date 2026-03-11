@@ -1,0 +1,4 @@
+Test,Run,Transfer,Throughput_Mbps
+Limpopo→DN_TCP_1stream,1,933 MBytes,390
+Limpopo→DN_TCP_1stream,2,1.30 GBytes,559
+Limpopo→DN_TCP_1stream,3,1.52 GBytes,651

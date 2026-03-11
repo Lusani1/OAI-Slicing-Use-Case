@@ -1,0 +1,481 @@
+time="2025-09-11T15:12:15+02:00" level=warning msg="/home/fiveg/Documents/OAI_Raw/oai-cn5g-fed/docker-compose/docker-compose-ueransim-vpp_slice2.yaml: `version` is obsolete"
+time="2025-09-11T15:12:15+02:00" level=warning msg="networks.public_net: external.name is deprecated. Please set name and external: true"
+time="2025-09-11T15:12:15+02:00" level=warning msg="networks.public_net_access2: external.name is deprecated. Please set name and external: true"
+time="2025-09-11T15:12:15+02:00" level=warning msg="Found orphan containers ([oai-smf oai-udr oai-smf2 vpp-upf vpp-upf2 oai-amf oai-ausf oai-udm mysql oai-nrf oai-ext-dn]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container ueransim1  Creating
+ Container ueransim1  Created
+Attaching to ueransim1
+[2Kueransim1  | Now setting these variables '@GTP_IP@ @IGNORE_STREAM_IDS@ @LINK_IP@ @MCC@ @MNC@ @NCI@ @NGAP_IP@ @NGAP_PEER_IP@ @SD_0@ @SD_1@ @SD_2@ @SST_0@ @SST_1@ @SST_2@ @TAC@'
+[2Kueransim1  | Now setting these variables '@AMF_VALUE@ @APN@ @GNB_IP_ADDRESS@ @IMEI@ @IMEI_SV@ @IMSI@ @KEY@ @MCC@ @MNC@ @OP@ @OP_TYPE@ @PDU_TYPE@ @SD_C@ @SD_D@ @SD_R@ @SST_C@ @SST_D@ @SST_R@'
+[2Kueransim1  | Done setting the configuration
+[2Kueransim1  | ### Running ueransim ###
+[2Kueransim1  | Running gnb
+[2Kueransim1  | UERANSIM v3.2.5
+[2Kueransim1  | [2025-09-11 13:12:16.071] [sctp] [info] Trying to establish SCTP connection... (192.168.70.132:38412)
+[2Kueransim1  | [2025-09-11 13:12:16.073] [sctp] [info] SCTP connection established (192.168.70.132:38412)
+[2Kueransim1  | [2025-09-11 13:12:16.073] [sctp] [debug] SCTP association setup ascId[23]
+[2Kueransim1  | [2025-09-11 13:12:16.073] [ngap] [debug] Sending NG Setup Request
+[2Kueransim1  | [2025-09-11 13:12:16.074] [ngap] [debug] NG Setup Response received
+[2Kueransim1  | [2025-09-11 13:12:16.074] [ngap] [info] NG Setup procedure is successful
+[2Kueransim1  | Running ue
+[2Kueransim1  | UERANSIM v3.2.5
+[2Kueransim1  | [2025-09-11 13:12:17.068] [nas] [info] UE switches to state [MM-DEREGISTERED/PLMN-SEARCH]
+[2Kueransim1  | [2025-09-11 13:12:17.068] [rrc] [debug] UE[1] new signal detected
+[2Kueransim1  | [2025-09-11 13:12:17.068] [rrc] [debug] New signal detected for cell[1], total [1] cells in coverage
+[2Kueransim1  | [2025-09-11 13:12:17.068] [nas] [info] Selected plmn[208/95]
+[2Kueransim1  | [2025-09-11 13:12:17.068] [rrc] [info] Selected cell plmn[208/95] tac[40960] category[SUITABLE]
+[2Kueransim1  | [2025-09-11 13:12:17.068] [nas] [info] UE switches to state [MM-DEREGISTERED/PS]
+[2Kueransim1  | [2025-09-11 13:12:17.068] [nas] [info] UE switches to state [MM-DEREGISTERED/NORMAL-SERVICE]
+[2Kueransim1  | [2025-09-11 13:12:17.068] [nas] [debug] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2Kueransim1  | [2025-09-11 13:12:17.068] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:12:17.068] [nas] [debug] Sending Initial Registration
+[2Kueransim1  | [2025-09-11 13:12:17.068] [nas] [info] UE switches to state [MM-REGISTER-INITIATED]
+[2Kueransim1  | [2025-09-11 13:12:17.068] [rrc] [debug] Sending RRC Setup Request
+[2Kueransim1  | [2025-09-11 13:12:17.068] [rrc] [info] RRC Setup for UE[1]
+[2Kueransim1  | [2025-09-11 13:12:17.068] [rrc] [info] RRC connection established
+[2Kueransim1  | [2025-09-11 13:12:17.068] [rrc] [info] UE switches to state [RRC-CONNECTED]
+[2Kueransim1  | [2025-09-11 13:12:17.068] [nas] [info] UE switches to state [CM-CONNECTED]
+[2Kueransim1  | [2025-09-11 13:12:17.068] [ngap] [debug] Initial NAS message received from UE[1]
+[2Kueransim1  | [2025-09-11 13:12:17.081] [nas] [debug] Authentication Request received
+[2Kueransim1  | [2025-09-11 13:12:17.091] [nas] [debug] Security Mode Command received
+[2Kueransim1  | [2025-09-11 13:12:17.091] [nas] [debug] Selected integrity[1] ciphering[1]
+[2Kueransim1  | [2025-09-11 13:12:17.095] [ngap] [debug] Initial Context Setup Request received
+[2Kueransim1  | [2025-09-11 13:12:17.095] [nas] [debug] Registration accept received
+[2Kueransim1  | [2025-09-11 13:12:17.095] [nas] [info] UE switches to state [MM-REGISTERED/NORMAL-SERVICE]
+[2Kueransim1  | [2025-09-11 13:12:17.095] [nas] [debug] Sending Registration Complete
+[2Kueransim1  | [2025-09-11 13:12:17.096] [nas] [info] Initial Registration is successful
+[2Kueransim1  | [2025-09-11 13:12:17.096] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:12:17.096] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:12:34.084] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:12:34.084] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:12:50.100] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:12:50.100] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:13:06.116] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:13:06.116] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:13:22.132] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:13:22.132] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:13:38.148] [nas] [error] PDU Session Establishment procedure failure, no response from the network after 5 attempts
+[2Kueransim1  | [2025-09-11 13:13:38.148] [nas] [debug] Aborting SM procedure for PTI[1], PSI[1]
+[2Kueransim1  | [2025-09-11 13:13:38.541] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:13:38.541] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:13:55.165] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:13:55.165] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:14:11.181] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:14:11.181] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:14:11.185] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:14:11.571] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:14:11.571] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:14:11.574] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:14:12.672] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:14:12.672] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:14:12.675] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:14:13.773] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:14:13.773] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:14:13.776] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:14:14.874] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:14:14.874] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:14:14.877] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:14:15.975] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:14:15.975] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:14:32.202] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:14:32.202] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:14:32.205] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:14:32.490] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:14:32.490] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:14:32.493] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:14:33.591] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:14:33.591] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:14:50.220] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:14:50.220] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:14:50.223] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:14:51.207] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:14:51.207] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:14:51.210] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:14:52.308] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:14:52.308] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:09.239] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:15:09.239] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:09.242] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:09.924] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:09.924] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:09.927] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:11.025] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:11.025] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:11.028] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:12.126] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:12.126] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:12.129] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:13.227] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:13.227] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:13.230] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:14.328] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:14.328] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:14.331] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:15.429] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:15.429] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:15.432] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:16.089] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:16.089] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:16.092] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:16.530] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:16.530] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:16.533] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:17.631] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:17.631] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:17.634] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:18.732] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:18.732] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:18.735] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:19.833] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:19.833] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:19.836] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:20.934] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:20.934] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:20.937] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:22.035] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:22.035] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:22.038] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:23.136] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:23.136] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:23.139] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:24.237] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:24.237] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:24.240] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:25.338] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:25.338] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:25.340] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:26.090] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:26.090] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:26.093] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:26.439] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:26.439] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:26.442] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:27.540] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:27.540] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:44.274] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:15:44.274] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:44.277] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:45.156] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:45.156] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:45.159] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:46.092] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:46.092] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:46.095] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:46.257] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:46.257] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:46.260] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:47.358] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:47.358] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:47.361] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:48.459] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:48.459] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:48.462] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:49.560] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:49.560] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:49.563] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:50.661] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:50.661] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:50.664] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:51.762] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:51.762] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:51.765] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:52.863] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:52.863] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:52.866] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:53.964] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:53.964] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:53.967] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:55.065] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:55.065] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:55.068] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:56.093] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:56.093] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:56.097] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:56.166] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:56.166] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:56.169] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:57.267] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:57.267] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:57.270] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:58.368] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:58.368] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:58.371] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:15:59.469] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:15:59.469] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:15:59.472] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:00.570] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:00.570] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:00.573] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:01.671] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:01.671] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:01.674] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:02.772] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:02.772] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:02.775] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:03.873] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:03.873] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:03.876] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:04.974] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:04.974] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:04.977] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:06.075] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:06.075] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:22.312] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:16:22.312] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:22.315] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:22.590] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:22.590] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:22.593] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:23.691] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:23.691] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:23.694] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:24.792] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:24.792] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:24.795] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:25.893] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:25.893] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:25.896] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:26.096] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:26.096] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:26.099] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:26.994] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:26.994] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:26.997] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:28.095] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:28.095] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:28.097] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:29.196] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:29.196] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:29.199] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:30.297] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:30.297] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:30.300] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:31.398] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:31.398] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:31.401] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:32.499] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:32.499] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:32.502] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:33.600] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:33.600] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:33.603] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:34.701] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:34.701] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:34.704] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:35.802] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:35.802] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:35.805] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:36.097] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:36.097] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:36.100] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:36.903] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:36.903] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:53.343] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:16:53.343] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:53.346] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:53.418] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:53.418] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:16:53.421] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:16:54.519] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:16:54.519] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:11.361] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:17:11.361] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:11.364] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:12.135] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:12.135] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:12.138] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:13.236] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:13.236] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:13.239] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:14.337] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:14.337] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:30.380] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:17:30.380] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:30.383] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:30.852] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:30.852] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:30.855] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:31.953] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:31.953] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:31.956] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:33.054] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:33.054] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:33.057] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:34.155] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:34.155] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:34.158] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:35.256] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:35.256] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:35.259] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:36.103] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:36.103] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:36.106] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:36.357] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:36.357] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:36.360] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:37.458] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:37.458] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:37.461] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:38.559] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:38.559] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:38.562] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:39.660] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:39.660] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:39.663] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:40.761] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:40.761] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:40.764] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:41.862] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:41.862] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:41.865] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:42.963] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:42.963] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:42.966] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:44.064] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:44.064] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:44.067] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:45.165] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:45.165] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:45.168] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:46.104] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:46.104] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:46.107] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:46.266] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:46.266] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:46.268] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:47.367] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:47.367] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:47.370] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:48.468] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:48.468] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:48.471] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:49.569] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:49.569] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:49.572] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:50.670] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:50.670] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:17:50.673] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:17:51.771] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:17:51.771] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:08.418] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:18:08.418] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:08.421] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:09.387] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:09.387] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:09.390] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:10.488] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:10.488] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:10.491] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:11.589] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:11.589] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:11.592] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:12.690] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:12.690] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:12.693] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:13.791] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:13.791] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:13.793] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:14.892] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:14.892] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:14.895] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:15.993] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:15.993] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:15.996] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:16.107] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:16.107] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:16.110] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:17.094] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:17.094] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:17.096] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:18.195] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:18.195] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:18.197] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:19.296] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:19.296] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:19.299] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:20.397] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:20.397] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:20.399] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:21.498] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:21.498] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:21.501] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:22.599] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:22.599] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:22.602] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:23.700] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:23.700] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:23.703] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:24.801] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:24.801] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:24.804] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:25.902] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:25.902] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:25.905] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:26.108] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:26.108] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:42.452] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:18:42.452] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:42.455] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:43.518] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:43.518] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:43.520] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:44.619] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:44.619] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:44.622] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:45.720] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:45.720] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:45.723] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:46.110] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:46.110] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:46.113] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:46.821] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:46.821] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:46.824] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:47.922] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:47.922] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:47.925] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:49.023] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:49.023] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:49.026] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:50.124] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:50.124] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:50.127] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:51.225] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:51.225] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:51.228] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:52.326] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:52.326] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:52.329] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:53.427] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:53.427] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:53.430] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:54.528] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:54.528] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:54.531] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:55.629] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:55.629] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:55.632] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:56.111] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:56.111] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:56.114] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:56.730] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:56.730] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:56.733] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:57.831] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:57.831] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:18:57.834] [nas] [error] PDU Session Establishment Reject received [?]
+[2Kueransim1  | [2025-09-11 13:18:58.932] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim1  | [2025-09-11 13:18:58.932] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:19:11.521] [sctp] [debug] SCTP association shutdown (clientId: 2)
+[2Kueransim1  | [2025-09-11 13:19:11.521] [sctp] [warning] Unhandled SCTP notification received
+[2Kueransim1  | [2025-09-11 13:19:11.521] [ngap] [error] Association terminated for AMF[2]
+[2Kueransim1  | [2025-09-11 13:19:11.521] [ngap] [debug] Removing AMF context[2]
+[2Kueransim1  | [2025-09-11 13:19:15.485] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim1  | [2025-09-11 13:19:15.485] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim1  | [2025-09-11 13:19:15.486] [ngap] [error] AMF context not found with id: 2
+[2KGracefully stopping... (press Ctrl+C again to force)
+ Container ueransim1  Stopping
+ Container ueransim1  Killing
+ Container ueransim1  Killed
+ Container ueransim1  Stopped
+canceled

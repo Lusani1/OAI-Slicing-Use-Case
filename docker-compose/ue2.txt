@@ -1,0 +1,162 @@
+time="2025-09-14T15:46:36+02:00" level=warning msg="/home/fiveg/Desktop/OAI_Raw/oai-cn5g-fed/docker-compose/docker-compose-ueransim-vpp_slice1.yaml: `version` is obsolete"
+time="2025-09-14T15:46:36+02:00" level=warning msg="networks.public_net: external.name is deprecated. Please set name and external: true"
+time="2025-09-14T15:46:36+02:00" level=warning msg="networks.public_net_access: external.name is deprecated. Please set name and external: true"
+time="2025-09-14T15:46:36+02:00" level=warning msg="Found orphan containers ([ueransim1 oai-udr oai-smf vpp-upf2 oai-amf oai-udm vpp-upf oai-ausf mysql oai-ext-dn2 oai-nrf oai-ext-dn]) for this project. If you removed or renamed this service in your compose file, you can run this command with the --remove-orphans flag to clean it up."
+ Container ueransim  Creating
+ Container ueransim  Created
+Attaching to ueransim
+[2Kueransim  | Now setting these variables '@GTP_IP@ @IGNORE_STREAM_IDS@ @LINK_IP@ @MCC@ @MNC@ @NCI@ @NGAP_IP@ @NGAP_PEER_IP@ @SD_0@ @SD_1@ @SD_2@ @SST_0@ @SST_1@ @SST_2@ @TAC@'
+[2Kueransim  | Now setting these variables '@AMF_VALUE@ @APN@ @GNB_IP_ADDRESS@ @IMEI@ @IMEI_SV@ @IMSI@ @KEY@ @MCC@ @MNC@ @OP@ @OP_TYPE@ @PDU_TYPE@ @SD_C@ @SD_D@ @SD_R@ @SST_C@ @SST_D@ @SST_R@'
+[2Kueransim  | Done setting the configuration
+[2Kueransim  | ### Running ueransim ###
+[2Kueransim  | Running gnb
+[2Kueransim  | UERANSIM v3.2.5
+[2Kueransim  | [2025-09-14 13:46:36.452] [sctp] [info] Trying to establish SCTP connection... (192.168.70.132:38412)
+[2Kueransim  | [2025-09-14 13:46:36.454] [sctp] [info] SCTP connection established (192.168.70.132:38412)
+[2Kueransim  | [2025-09-14 13:46:36.454] [sctp] [debug] SCTP association setup ascId[23]
+[2Kueransim  | [2025-09-14 13:46:36.454] [ngap] [debug] Sending NG Setup Request
+[2Kueransim  | [2025-09-14 13:46:36.455] [ngap] [debug] NG Setup Response received
+[2Kueransim  | [2025-09-14 13:46:36.455] [ngap] [info] NG Setup procedure is successful
+[2Kueransim  | Running ue
+[2Kueransim  | UERANSIM v3.2.5
+[2Kueransim  | [2025-09-14 13:46:37.450] [nas] [info] UE switches to state [MM-DEREGISTERED/PLMN-SEARCH]
+[2Kueransim  | [2025-09-14 13:46:37.451] [rrc] [debug] New signal detected for cell[1], total [1] cells in coverage
+[2Kueransim  | [2025-09-14 13:46:37.451] [rrc] [debug] UE[1] new signal detected
+[2Kueransim  | [2025-09-14 13:46:37.451] [nas] [info] Selected plmn[208/95]
+[2Kueransim  | [2025-09-14 13:46:37.451] [rrc] [info] Selected cell plmn[208/95] tac[40960] category[SUITABLE]
+[2Kueransim  | [2025-09-14 13:46:37.451] [nas] [info] UE switches to state [MM-DEREGISTERED/PS]
+[2Kueransim  | [2025-09-14 13:46:37.452] [nas] [info] UE switches to state [MM-DEREGISTERED/NORMAL-SERVICE]
+[2Kueransim  | [2025-09-14 13:46:37.452] [nas] [debug] Initial registration required due to [MM-DEREG-NORMAL-SERVICE]
+[2Kueransim  | [2025-09-14 13:46:37.452] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:46:37.452] [nas] [debug] Sending Initial Registration
+[2Kueransim  | [2025-09-14 13:46:37.452] [nas] [info] UE switches to state [MM-REGISTER-INITIATED]
+[2Kueransim  | [2025-09-14 13:46:37.452] [rrc] [debug] Sending RRC Setup Request
+[2Kueransim  | [2025-09-14 13:46:37.452] [rrc] [info] RRC Setup for UE[1]
+[2Kueransim  | [2025-09-14 13:46:37.452] [rrc] [info] RRC connection established
+[2Kueransim  | [2025-09-14 13:46:37.452] [rrc] [info] UE switches to state [RRC-CONNECTED]
+[2Kueransim  | [2025-09-14 13:46:37.452] [nas] [info] UE switches to state [CM-CONNECTED]
+[2Kueransim  | [2025-09-14 13:46:37.452] [ngap] [debug] Initial NAS message received from UE[1]
+[2Kueransim  | [2025-09-14 13:46:37.472] [nas] [debug] Authentication Request received
+[2Kueransim  | [2025-09-14 13:46:37.483] [nas] [debug] Security Mode Command received
+[2Kueransim  | [2025-09-14 13:46:37.483] [nas] [debug] Selected integrity[1] ciphering[1]
+[2Kueransim  | [2025-09-14 13:46:37.487] [ngap] [debug] Initial Context Setup Request received
+[2Kueransim  | [2025-09-14 13:46:37.487] [nas] [debug] Registration accept received
+[2Kueransim  | [2025-09-14 13:46:37.487] [nas] [info] UE switches to state [MM-REGISTERED/NORMAL-SERVICE]
+[2Kueransim  | [2025-09-14 13:46:37.487] [nas] [debug] Sending Registration Complete
+[2Kueransim  | [2025-09-14 13:46:37.487] [nas] [info] Initial Registration is successful
+[2Kueransim  | [2025-09-14 13:46:37.487] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim  | [2025-09-14 13:46:37.487] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:46:54.467] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:46:54.467] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:47:10.483] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:47:10.483] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:47:26.499] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:47:26.499] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:47:42.515] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:47:42.515] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:47:58.531] [nas] [error] PDU Session Establishment procedure failure, no response from the network after 5 attempts
+[2Kueransim  | [2025-09-14 13:47:58.531] [nas] [debug] Aborting SM procedure for PTI[1], PSI[1]
+[2Kueransim  | [2025-09-14 13:47:58.924] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim  | [2025-09-14 13:47:58.924] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:48:15.548] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:48:15.548] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:48:31.564] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:48:31.564] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:48:47.580] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:48:47.580] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:49:03.596] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:49:03.596] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:49:19.612] [nas] [error] PDU Session Establishment procedure failure, no response from the network after 5 attempts
+[2Kueransim  | [2025-09-14 13:49:19.612] [nas] [debug] Aborting SM procedure for PTI[1], PSI[1]
+[2Kueransim  | [2025-09-14 13:49:20.398] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim  | [2025-09-14 13:49:20.398] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:49:36.629] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:49:36.629] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:49:52.645] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:49:52.645] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:50:08.661] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:50:08.661] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:50:24.677] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:50:24.677] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:50:40.693] [nas] [error] PDU Session Establishment procedure failure, no response from the network after 5 attempts
+[2Kueransim  | [2025-09-14 13:50:40.693] [nas] [debug] Aborting SM procedure for PTI[1], PSI[1]
+[2Kueransim  | [2025-09-14 13:50:40.771] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim  | [2025-09-14 13:50:40.771] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:50:57.710] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:50:57.710] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:51:13.726] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:51:13.726] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:51:29.742] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:51:29.742] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:51:45.758] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:51:45.758] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:52:01.774] [nas] [error] PDU Session Establishment procedure failure, no response from the network after 5 attempts
+[2Kueransim  | [2025-09-14 13:52:01.774] [nas] [debug] Aborting SM procedure for PTI[1], PSI[1]
+[2Kueransim  | [2025-09-14 13:52:02.245] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim  | [2025-09-14 13:52:02.245] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:52:18.791] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:52:18.791] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:52:34.807] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:52:34.807] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:52:50.823] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:52:50.823] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:53:06.839] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:53:06.839] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:53:22.855] [nas] [error] PDU Session Establishment procedure failure, no response from the network after 5 attempts
+[2Kueransim  | [2025-09-14 13:53:22.855] [nas] [debug] Aborting SM procedure for PTI[1], PSI[1]
+[2Kueransim  | [2025-09-14 13:53:23.719] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim  | [2025-09-14 13:53:23.719] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:53:39.872] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:53:39.872] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:53:55.888] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:53:55.888] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:54:11.904] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:54:11.904] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:54:27.920] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:54:27.920] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:54:43.936] [nas] [error] PDU Session Establishment procedure failure, no response from the network after 5 attempts
+[2Kueransim  | [2025-09-14 13:54:43.936] [nas] [debug] Aborting SM procedure for PTI[1], PSI[1]
+[2Kueransim  | [2025-09-14 13:54:44.092] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim  | [2025-09-14 13:54:44.092] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:55:00.953] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:55:00.953] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:55:16.969] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:55:16.969] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:55:32.985] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:55:32.985] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:55:49.001] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:55:49.001] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:56:05.017] [nas] [error] PDU Session Establishment procedure failure, no response from the network after 5 attempts
+[2Kueransim  | [2025-09-14 13:56:05.017] [nas] [debug] Aborting SM procedure for PTI[1], PSI[1]
+[2Kueransim  | [2025-09-14 13:56:05.566] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim  | [2025-09-14 13:56:05.566] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:56:22.034] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:56:22.034] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:56:38.050] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:56:38.050] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:56:54.066] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:56:54.066] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:57:10.082] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:57:10.082] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:57:26.098] [nas] [error] PDU Session Establishment procedure failure, no response from the network after 5 attempts
+[2Kueransim  | [2025-09-14 13:57:26.098] [nas] [debug] Aborting SM procedure for PTI[1], PSI[1]
+[2Kueransim  | [2025-09-14 13:57:26.517] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim  | [2025-09-14 13:57:26.517] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:57:43.115] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:57:43.115] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:57:59.131] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:57:59.131] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:58:15.147] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:58:15.147] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:58:31.163] [nas] [warning] Retransmitting PDU Session Establishment Request due to T3580 expiry
+[2Kueransim  | [2025-09-14 13:58:31.163] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2Kueransim  | [2025-09-14 13:58:47.179] [nas] [error] PDU Session Establishment procedure failure, no response from the network after 5 attempts
+[2Kueransim  | [2025-09-14 13:58:47.179] [nas] [debug] Aborting SM procedure for PTI[1], PSI[1]
+[2Kueransim  | [2025-09-14 13:58:47.413] [nas] [debug] Sending PDU Session Establishment Request
+[2Kueransim  | [2025-09-14 13:58:47.413] [nas] [debug] UAC access attempt is allowed for identity[0], category[MO_sig]
+[2KGracefully stopping... (press Ctrl+C again to force)
+ Container ueransim  Stopping
+ Container ueransim  Killing
+ Container ueransim  Killed
+ Container ueransim  Stopped
+canceled
