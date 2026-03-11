@@ -1,112 +1,183 @@
-<h1 align="center">
-    <a href="https://openairinterface.org/"><img src="https://openairinterface.org/wp-content/uploads/2015/06/cropped-oai_final_logo.png" alt="OAI" width="550"></a>
-</h1>
+# OAI-Slicing-Use-Case
 
-<p align="center">
-    <a href="https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed/-/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-OAI--Public--V1.1-blue" alt="License"></a>
-    <a href="https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-upf-vpp/-/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="License"></a>
-    <a href="https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-fed/-/releases"><img alt="GitLab Release (custom instance)" src="https://img.shields.io/gitlab/v/release/oai/cn5g/oai-cn5g-fed?gitlab_url=https%3A%2F%2Fgitlab.eurecom.fr&include_prereleases&sort=semver"></a>
-    <a href="https://releases.ubuntu.com/20.04/"><img src="https://img.shields.io/badge/OS-Ubuntu20-Green" alt="Supported OS"></a>
-    <a href="https://releases.ubuntu.com/22.04/"><img src="https://img.shields.io/badge/OS-Ubuntu22-Green" alt="Supported OS"></a>
-    <a href="https://www.redhat.com/en/enterprise-linux-9"><img src="https://img.shields.io/badge/OS-RHEL9-Green" alt="Supported OS"></a>
-</p>
+Practical OpenAirInterface 5G Core network slicing use case using a **shared control plane**, **multiple SMFs**, **multiple VPP-based UPFs**, and **UERANSIM-based gNB/UE emulation** for distributed service domains. The scenario demonstrates how a central 5G core can support multiple slices with slice-specific DNNs, subnets, and user-plane anchoring. :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}
 
-<p align="center">
-    <a href="https://jenkins-oai.eurecom.fr/job/OAI-CN5G-AMF/"><img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins-oai.eurecom.fr%2Fjob%2FOAI-CN5G-AMF%2F&label=build%20AMF"></a>
-    <a href="https://jenkins-oai.eurecom.fr/job/OAI-CN5G-AUSF/"><img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins-oai.eurecom.fr%2Fjob%2FOAI-CN5G-AUSF%2F&label=build%20AUSF"></a>
-    <a href="https://jenkins-oai.eurecom.fr/job/OAI-CN5G-LMF/"><img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins-oai.eurecom.fr%2Fjob%2FOAI-CN5G-LMF%2F&label=build%20LMF"></a>
-    <a href="https://jenkins-oai.eurecom.fr/job/OAI-CN5G-NEF/"><img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins-oai.eurecom.fr%2Fjob%2FOAI-CN5G-NEF%2F&label=build%20NEF"></a>
-    <a href="https://jenkins-oai.eurecom.fr/job/OAI-CN5G-NRF/"><img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins-oai.eurecom.fr%2Fjob%2FOAI-CN5G-NRF%2F&label=build%20NRF"></a>
-    <a href="https://jenkins-oai.eurecom.fr/job/OAI-CN5G-NSSF/"><img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins-oai.eurecom.fr%2Fjob%2FOAI-CN5G-NSSF%2F&label=build%20NSSF"></a>
-    <a href="https://jenkins-oai.eurecom.fr/job/OAI-CN5G-NWDAF/"><img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins-oai.eurecom.fr%2Fjob%2FOAI-CN5G-NWDAF%2F&label=build%20NWDAF"></a>
-    <a href="https://jenkins-oai.eurecom.fr/job/OAI-CN5G-PCF/"><img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins-oai.eurecom.fr%2Fjob%2FOAI-CN5G-PCF%2F&label=build%20PCF"></a>
-    <a href="https://jenkins-oai.eurecom.fr/job/OAI-CN5G-SMF/"><img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins-oai.eurecom.fr%2Fjob%2FOAI-CN5G-SMF%2F&label=build%20SMF"></a>
-    <a href="https://jenkins-oai.eurecom.fr/job/OAI-CN5G-UDM/"><img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins-oai.eurecom.fr%2Fjob%2FOAI-CN5G-UDM%2F&label=build%20UDM"></a>
-    <a href="https://jenkins-oai.eurecom.fr/job/OAI-CN5G-UDR/"><img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins-oai.eurecom.fr%2Fjob%2FOAI-CN5G-UDR%2F&label=build%20UDR"></a>
-    <a href="https://jenkins-oai.eurecom.fr/job/OAI-CN5G-UPF/"><img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins-oai.eurecom.fr%2Fjob%2FOAI-CN5G-UPF%2F&label=build%20UPF"></a>
-    <a href="https://jenkins-oai.eurecom.fr/job/OAI-CN5G-UPF-VPP/"><img src="https://img.shields.io/jenkins/build?jobUrl=https%3A%2F%2Fjenkins-oai.eurecom.fr%2Fjob%2FOAI-CN5G-UPF-VPP%2F&label=build%20UPF-VPP"></a>
-</p>
+## Architecture Overview
 
-<p align="center">
-  <a href="https://hub.docker.com/r/oaisoftwarealliance/oai-amf"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/oaisoftwarealliance/oai-amf?label=amf%20docker%20pulls"></a>
-  <a href="https://hub.docker.com/r/oaisoftwarealliance/oai-ausf"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/oaisoftwarealliance/oai-ausf?label=ausf%20docker%20pulls"></a>
-  <a href="https://hub.docker.com/r/oaisoftwarealliance/oai-lmf"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/oaisoftwarealliance/oai-lmf?label=lmf%20docker%20pulls"></a>
-  <a href="https://hub.docker.com/r/oaisoftwarealliance/oai-nef"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/oaisoftwarealliance/oai-nef?label=nef%20docker%20pulls"></a>
-  <a href="https://hub.docker.com/r/oaisoftwarealliance/oai-nrf"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/oaisoftwarealliance/oai-nrf?label=nrf%20docker%20pulls"></a>
-  <a href="https://hub.docker.com/r/oaisoftwarealliance/oai-nssf"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/oaisoftwarealliance/oai-nssf?label=nssf%20docker%20pulls"></a>
-  <a href="https://hub.docker.com/r/oaisoftwarealliance/oai-pcf"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/oaisoftwarealliance/oai-pcf?label=pcf%20docker%20pulls"></a>
-  <a href="https://hub.docker.com/r/oaisoftwarealliance/oai-smf"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/oaisoftwarealliance/oai-smf?label=smf%20docker%20pulls"></a>
-  <a href="https://hub.docker.com/r/oaisoftwarealliance/oai-udm"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/oaisoftwarealliance/oai-udm?label=udm%20docker%20pulls"></a>
-  <a href="https://hub.docker.com/r/oaisoftwarealliance/oai-udr"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/oaisoftwarealliance/oai-udr?label=udr%20docker%20pulls"></a>
-  <a href="https://hub.docker.com/r/oaisoftwarealliance/oai-upf"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/oaisoftwarealliance/oai-upf?label=upf%20docker%20pulls"></a>
-  <a href="https://hub.docker.com/r/oaisoftwarealliance/oai-upf-vpp"><img alt="Docker Pulls" src="https://img.shields.io/docker/pulls/oaisoftwarealliance/oai-upf-vpp?label=upf-vpp%20docker%20pulls"></a>
-</p>
+This repository implements a slicing scenario aligned to the attached architecture:
 
-<h2 align="center">
- OPENAIR-CN-5G: An implementation of the 5G Core network by the OpenAirInterface community.
-</h2>
+- A **shared control plane** hosted in a central data centre
+- An **Education Slice** spanning two access domains
+- A **Telemedicine Slice** spanning a separate access domain
+- Dedicated **UPFs** and **DNNs** per traffic domain
+- Slice-aware session handling using **S-NSSAI**, **SMF selection**, and **UPF/DNN mapping** :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3} :contentReference[oaicite:4]{index=4}
 
-`OPENAIR-CN-5G` is an implementation of the 3GPP specifications for the 5G Core Network.
-At the moment, it contains the following network elements:
+---
 
-* Access and Mobility Management Function (**[AMF](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-amf)**)
-* Authentication Server Management Function (**[AUSF](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-ausf)**)
-* Location Management Function (**[LMF](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-lmf)**)
-* Network Exposure Function (**[NEF](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-nef)**)
-* Network Repository Function (**[NRF](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-nrf)**)
-* Network Slicing Selection Function (**[NSSF](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-nssf)**)
-* Network Data Analytics Function (**[NWDAF](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-nwdaf)**)
-* Policy Control Function (**[PCF](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-pcf)**)
-* Session Management Function (**[SMF](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-smf)**)
-* Unified Data Management (**[UDM](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-udm)**)
-* Unified Data Repository (**[UDR](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-udr)**)
-* User Plane Function (**UPF**) with 2 variants:
-  * Simple Implementation (with a eBPF option) (**[UPF](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-upf)**)
-  * VPP-Based Implementation (**[UPF-VPP](https://gitlab.eurecom.fr/oai/cn5g/oai-cn5g-upf-vpp)**)
-* Unstructured Data Storage Function (**UDSF**)
+## Implemented Network Functions
 
-Each has its own repository. Some of these repositories are still private, soon to be released.
+### Shared control plane
+The shared core includes:
 
-This repository is a **Federation of the OpenAir CN 5G repositories**.
+- `mysql`
+- `oai-nrf`
+- `oai-amf`
+- `oai-ausf`
+- `oai-udm`
+- `oai-udr`
+- `oai-smf`
+- `oai-smf2` :contentReference[oaicite:5]{index=5} :contentReference[oaicite:6]{index=6}
 
-Its main purpose is for Continuous Integration scripting.
+### User plane
+The deployment includes three VPP-based UPFs:
 
-It also hosts some tutorials.
+- `vpp-upf`
+- `vpp-upf2`
+- `vpp-upf3` :contentReference[oaicite:7]{index=7} :contentReference[oaicite:8]{index=8}
 
-* [How to do a container-based simple deployment](docs/DEPLOY_HOME.md).
-* [How to create a container-based developer environment](docs/DEBUG_5G_CORE.md).
+### Access emulation
+Three UERANSIM instances emulate geographically separated gNB/UE domains:
 
-# Licence info
+- `ueransim`
+- `ueransim1`
+- `ueransim2` :contentReference[oaicite:9]{index=9} :contentReference[oaicite:10]{index=10} :contentReference[oaicite:11]{index=11}
 
-It is distributed under `OAI Public License V1.1`.
-See [OAI Website for more details](https://www.openairinterface.org/?page_id=698).
+---
 
-The text for `OAI Public License V1.1` is also available under [LICENSE](LICENSE)
-file at the root of this repository.
+## Slice Design
 
-Note that the `UPF-VPP` implementation is distributed under `Apache V2.0 License`.
+## 1. Education Slice
+This slice is configured with:
 
-See [Apache Website for more details](http://www.apache.org/licenses/LICENSE-2.0).
+- `SST=1`
+- `SD=000001`
 
-# Collaborative work
+It is handled by `oai-smf` and supports:
 
-This source code is managed through a GITLAB server, a collaborative development platform.
+- DNN `default`
+- DNN `oai.ipv4` :contentReference[oaicite:12]{index=12} :contentReference[oaicite:13]{index=13}
 
-Process is explained in [CONTRIBUTING](CONTRIBUTING.md) file.
+Associated UPFs:
 
-If you wish to discuss development topics, we have a weekly one-hour meeting every Tuesday at 11AM CET.
+- `vpp-upf` for `default`
+- `vpp-upf2` for `oai.ipv4` :contentReference[oaicite:14]{index=14}
 
-The meeting details are available through this [ics file](./docs/meeting_invitations/invite-2024.ics).
+Configured UE subnets:
 
-# Contribution requests
+- `13.1.1.0/26` for `default`
+- `12.1.1.64/26` for `oai.ipv4` :contentReference[oaicite:15]{index=15}
 
-In a general way, anybody who is willing can contribute on any part of the
-code in any network component.
+Mapped access domains:
 
-Contributions can be simple bugfixes, advices and remarks on the design,
-architecture, coding/implementation.
+- Slice 1 domain A via `ueransim`
+- Slice 1 domain B via `ueransim1` :contentReference[oaicite:16]{index=16} :contentReference[oaicite:17]{index=17}
 
-# Release Notes
+---
 
-They are available on the [CHANGELOG](CHANGELOG.md) file.
+## 2. Telemedicine Slice
+This slice is configured with:
 
+- `SST=1`
+- `SD=000000`
+
+It is handled by `oai-smf2` and supports:
+
+- DNN `oai` :contentReference[oaicite:18]{index=18} :contentReference[oaicite:19]{index=19}
+
+Associated UPF:
+
+- `vpp-upf3` :contentReference[oaicite:20]{index=20}
+
+Configured UE subnet:
+
+- `14.1.1.128/25` :contentReference[oaicite:21]{index=21}
+
+Mapped access domain:
+
+- Slice 2 via `ueransim2` :contentReference[oaicite:22]{index=22}
+
+---
+
+## Core Configuration Summary
+
+The AMF is configured to support multiple slices under PLMN:
+
+- `MCC=208`
+- `MNC=95`
+- `TAC=0xa000`
+
+Supported slices include:
+
+- `SST=1, SD=000000`
+- `SST=1, SD=000001`
+- one additional custom slice entry present in the config :contentReference[oaicite:23]{index=23}
+
+AMF slice-aware operation is enabled with:
+
+- `enable_nssf: no`
+- `enable_smf_selection: yes` :contentReference[oaicite:24]{index=24}
+
+---
+
+## UERANSIM Profiles
+
+### `ueransim`
+Used for one Education Slice access domain:
+
+- `NCI=0x000000010`
+- `LINK_IP=192.168.70.141`
+- `GTP_IP=192.168.72.141`
+- `NUMBER_OF_UE=1`
+- `APN=default`
+- `SST=1`
+- `SD=1` :contentReference[oaicite:25]{index=25}
+
+### `ueransim1`
+Used for another Education Slice access domain:
+
+- `NCI=0x000000012`
+- `LINK_IP=192.168.70.142`
+- `GTP_IP=192.168.74.142`
+- `NUMBER_OF_UE=50`
+- `APN=oai.ipv4`
+- `SST=1`
+- `SD=1` :contentReference[oaicite:26]{index=26}
+
+### `ueransim2`
+Used for the Telemedicine Slice:
+
+- `NCI=0x000000013`
+- `LINK_IP=192.168.70.144`
+- `GTP_IP=192.168.75.144`
+- `NUMBER_OF_UE=1`
+- `APN=oai`
+- `SST=1`
+- `SD=0` :contentReference[oaicite:27]{index=27}
+
+---
+
+## Docker Networks
+
+The deployment uses the following Docker networks:
+
+- `demo-oai-public-net` → shared SBI/N2/control-plane network
+- `oai-public-access` → access network for `vpp-upf`
+- `oai-public-access2` → access network for `vpp-upf2`
+- `oai-public-access3` → access network for `vpp-upf3`
+- `oai-public-core` → N6/core-facing network for external DNs :contentReference[oaicite:28]{index=28} :contentReference[oaicite:29]{index=29} :contentReference[oaicite:30]{index=30} :contentReference[oaicite:31]{index=31}
+
+---
+
+## Repository Structure
+
+```text
+OAI-Slicing-Use-Case/
+├── docker-compose-basic-vpp-nrf.yaml
+├── docker-compose-ueransim-vpp_slice1_1.yaml
+├── docker-compose-ueransim-vpp_slice1_2.yaml
+├── docker-compose-ueransim-vpp_slice2.yaml
+├── conf/
+│   ├── basic_vpp_nrf_config.yaml
+│   ├── basic_vpp_nrf_config_slice1.yaml
+│   └── basic_vpp_nrf_config_slice2.yaml
+└── README.md
