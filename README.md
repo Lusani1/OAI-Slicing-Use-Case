@@ -49,6 +49,7 @@ Three UERANSIM instances emulate geographically separated gNB/UE domains:
 - `ueransim2`
   
 The configs for the gNB/UE stacks are `docker-compose-ueransim-vpp_slice1_1.yaml`, `docker-compose-ueransim-vpp_slice1_2.yaml`, and `docker-compose-ueransim-vpp_slice2.yaml`.
+
 ---
 
 ## Slice Design
@@ -100,7 +101,8 @@ Configured UE subnet:
 
 Mapped access domain:
 
-- Slice 2 via `ueransim2` 
+- Slice 2 via `ueransim2`
+  
 ---
 
 ## Core Configuration Summary
@@ -169,7 +171,8 @@ The deployment uses the following Docker networks:
 - `oai-public-access` → access network for `vpp-upf`
 - `oai-public-access2` → access network for `vpp-upf2`
 - `oai-public-access3` → access network for `vpp-upf3`
-- `oai-public-core` → N6/core-facing network for external DNs 
+- `oai-public-core` → N6/core-facing network for external DNs
+  
 ---
 
 ## Repository Structure (For this use case)
@@ -192,6 +195,8 @@ OAI-Slicing-Use-Case/
 │   └── basic_vpp_nrf_config_slice2.yaml
 └── README.md
 ```
+---
+
 ## File roles
 - `docker-compose-basic-vpp-nrf.yaml`
   
@@ -220,6 +225,8 @@ UERANSIM deployment for Education Slice domain B.
   
 UERANSIM deployment for the Telemedicine Slice.
 
+---
+
 ## Prerequisites
 Before running the scenario, ensure the host has:
 - Docker
@@ -228,6 +235,8 @@ Before running the scenario, ensure the host has:
 - Sufficient CPU and RAM for multiple CN containers and UERANSIM instances
 - Proper routing / iptables support for container-based data networking
 The compose files assume the referenced OAI and UERANSIM images are available locally or can be pulled successfully.
+
+---
 
 ## Deployment
 1. Start the shared core
@@ -246,6 +255,7 @@ docker compose -f docker-compose-ueransim-vpp_slice1_2.yaml up -d
 ```bash
 docker compose -f docker-compose-ueransim-vpp_slice2.yaml up -d
 ```
+---
 ## Validation
 Check running containers
 ```bash
@@ -299,6 +309,8 @@ Expected UE IP pools include:
 - 12.1.1.64/26
 - 14.1.1.128/25
 
+---
+
 ## How Traffic Is Steered
 This use case demonstrates the following slice workflow:
 1. UERANSIM gNBs connect to the shared AMF over N2
@@ -318,6 +330,8 @@ For the Education Slice:
 For the Telemedicine Slice:
 - oai traffic maps to vpp-upf3 
 
+---
+
 ## Use Case Interpretation
 This repository can be used to demonstrate:
 - shared-control-plane slicing
@@ -328,6 +342,8 @@ This repository can be used to demonstrate:
 
 Although the architecture uses geographic labels such as Gauteng, Limpopo, Cape Town, and Northern Cape, the deployment itself is implemented as a lab/demo environment using Docker-based logical separation. 
 
+---
+
 ## Limitations
 This repository is intended for research, experimentation, and demonstration.
 Current limitations include:
@@ -337,6 +353,8 @@ Current limitations include:
 - no orchestration layer such as Kubernetes or OSM
 - no production-grade observability or resiliency framework
 
+---
+
 ## Future Improvements
 Possible next steps include:
 - integrating NSSF-driven slice selection
@@ -345,6 +363,8 @@ Possible next steps include:
 - collecting per-slice performance metrics
 - deploying edge applications behind each DN
 - integrating with orchestration platforms such as OpenStack, Kubernetes, or OSM
+
+---
 
 ## Acknowledgement
 This repository builds on OpenAirInterface 5G Core components, VPP-based UPF containers, and UERANSIM-based access emulation, adapted into a multi-slice demonstration environment for practical experimentation.
