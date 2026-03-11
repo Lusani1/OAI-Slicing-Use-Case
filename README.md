@@ -1,7 +1,6 @@
 # OAI-Slicing-Use-Case
 
-Practical OpenAirInterface 5G Core network slicing use case using a **shared control plane**, **multiple SMFs**, **multiple VPP-based UPFs**, and **UERANSIM-based gNB/UE emulation** for distributed service domains. The scenario demonstrates how a central 5G core can support multiple slices with slice-specific DNNs, subnets, and user-plane anchoring. :contentReference[oaicite:0]{index=0} :contentReference[oaicite:1]{index=1}
-
+Practical OpenAirInterface 5G Core network slicing use case using a **shared control plane**, **multiple SMFs**, **multiple VPP-based UPFs**, and **UERANSIM-based gNB/UE emulation** for distributed service domains. The scenario demonstrates how a central 5G core can support multiple slices with slice-specific DNNs, subnets, and user-plane anchoring. 
 ## Architecture Overview
 
 This repository implements a slicing scenario aligned to the attached architecture:
@@ -10,8 +9,7 @@ This repository implements a slicing scenario aligned to the attached architectu
 - An **Education Slice** spanning two access domains
 - A **Telemedicine Slice** spanning a separate access domain
 - Dedicated **UPFs** and **DNNs** per traffic domain
-- Slice-aware session handling using **S-NSSAI**, **SMF selection**, and **UPF/DNN mapping** :contentReference[oaicite:2]{index=2} :contentReference[oaicite:3]{index=3} :contentReference[oaicite:4]{index=4}
-
+- Slice-aware session handling using **S-NSSAI**, **SMF selection**, and **UPF/DNN mapping** 
 ---
 
 ## Implemented Network Functions
@@ -26,21 +24,21 @@ The shared core includes:
 - `oai-udm`
 - `oai-udr`
 - `oai-smf`
-- `oai-smf2` :contentReference[oaicite:5]{index=5} :contentReference[oaicite:6]{index=6}
-
+- `oai-smf2`
+- 
 ### User plane
 The deployment includes three VPP-based UPFs:
 
 - `vpp-upf`
 - `vpp-upf2`
-- `vpp-upf3` :contentReference[oaicite:7]{index=7} :contentReference[oaicite:8]{index=8}
-
+- `vpp-upf3`
+- 
 ### Access emulation
 Three UERANSIM instances emulate geographically separated gNB/UE domains:
 
 - `ueransim`
 - `ueransim1`
-- `ueransim2` :contentReference[oaicite:9]{index=9} :contentReference[oaicite:10]{index=10} :contentReference[oaicite:11]{index=11}
+- `ueransim2` 
 
 ---
 
@@ -55,23 +53,22 @@ This slice is configured with:
 It is handled by `oai-smf` and supports:
 
 - DNN `default`
-- DNN `oai.ipv4` :contentReference[oaicite:12]{index=12} :contentReference[oaicite:13]{index=13}
-
+- DNN `oai.ipv4`
+- 
 Associated UPFs:
 
 - `vpp-upf` for `default`
-- `vpp-upf2` for `oai.ipv4` :contentReference[oaicite:14]{index=14}
+- `vpp-upf2` for `oai.ipv4` 
 
 Configured UE subnets:
 
 - `13.1.1.0/26` for `default`
-- `12.1.1.64/26` for `oai.ipv4` :contentReference[oaicite:15]{index=15}
+- `12.1.1.64/26` for `oai.ipv4` 
 
 Mapped access domains:
 
 - Slice 1 domain A via `ueransim`
-- Slice 1 domain B via `ueransim1` :contentReference[oaicite:16]{index=16} :contentReference[oaicite:17]{index=17}
-
+- Slice 1 domain B via `ueransim1` 
 ---
 
 ## 2. Telemedicine Slice
@@ -82,20 +79,19 @@ This slice is configured with:
 
 It is handled by `oai-smf2` and supports:
 
-- DNN `oai` :contentReference[oaicite:18]{index=18} :contentReference[oaicite:19]{index=19}
+- DNN `oai` 
 
 Associated UPF:
 
-- `vpp-upf3` :contentReference[oaicite:20]{index=20}
+- `vpp-upf3` 
 
 Configured UE subnet:
 
-- `14.1.1.128/25` :contentReference[oaicite:21]{index=21}
+- `14.1.1.128/25` 
 
 Mapped access domain:
 
-- Slice 2 via `ueransim2` :contentReference[oaicite:22]{index=22}
-
+- Slice 2 via `ueransim2` 
 ---
 
 ## Core Configuration Summary
@@ -110,13 +106,13 @@ Supported slices include:
 
 - `SST=1, SD=000000`
 - `SST=1, SD=000001`
-- one additional custom slice entry present in the config :contentReference[oaicite:23]{index=23}
-
+- one additional custom slice entry present in the config
+  
 AMF slice-aware operation is enabled with:
 
 - `enable_nssf: no`
-- `enable_smf_selection: yes` :contentReference[oaicite:24]{index=24}
-
+- `enable_smf_selection: yes`
+  
 ---
 
 ## UERANSIM Profiles
@@ -130,7 +126,7 @@ Used for one Education Slice access domain:
 - `NUMBER_OF_UE=1`
 - `APN=default`
 - `SST=1`
-- `SD=1` :contentReference[oaicite:25]{index=25}
+- `SD=1` 
 
 ### `ueransim1`
 Used for another Education Slice access domain:
@@ -141,7 +137,7 @@ Used for another Education Slice access domain:
 - `NUMBER_OF_UE=50`
 - `APN=oai.ipv4`
 - `SST=1`
-- `SD=1` :contentReference[oaicite:26]{index=26}
+- `SD=1` 
 
 ### `ueransim2`
 Used for the Telemedicine Slice:
@@ -152,7 +148,7 @@ Used for the Telemedicine Slice:
 - `NUMBER_OF_UE=1`
 - `APN=oai`
 - `SST=1`
-- `SD=0` :contentReference[oaicite:27]{index=27}
+- `SD=0` 
 
 ---
 
@@ -164,8 +160,7 @@ The deployment uses the following Docker networks:
 - `oai-public-access` → access network for `vpp-upf`
 - `oai-public-access2` → access network for `vpp-upf2`
 - `oai-public-access3` → access network for `vpp-upf3`
-- `oai-public-core` → N6/core-facing network for external DNs :contentReference[oaicite:28]{index=28} :contentReference[oaicite:29]{index=29} :contentReference[oaicite:30]{index=30} :contentReference[oaicite:31]{index=31}
-
+- `oai-public-core` → N6/core-facing network for external DNs 
 ---
 
 ## Repository Structure
@@ -181,3 +176,37 @@ OAI-Slicing-Use-Case/
 │   ├── basic_vpp_nrf_config_slice1.yaml
 │   └── basic_vpp_nrf_config_slice2.yaml
 └── README.md
+```
+## File roles
+- `docker-compose-basic-vpp-nrf.yaml`
+Deploys the shared core, SMFs, UPFs, and external data networks. 
+
+docker-compose-basic-vpp-nrf
+
+basic_vpp_nrf_config.yaml
+Shared AMF/NRF/UDM/UDR/AUSF configuration and AMF slice support. 
+
+basic_vpp_nrf_config
+
+basic_vpp_nrf_config_slice1.yaml
+SMF configuration for the slice with SST=1, SD=000001. 
+
+basic_vpp_nrf_config_slice1
+
+basic_vpp_nrf_config_slice2.yaml
+SMF configuration for the slice with SST=1, SD=000000. 
+
+basic_vpp_nrf_config_slice2
+
+docker-compose-ueransim-vpp_slice1_1.yaml
+UERANSIM deployment for Education Slice domain A. 
+
+docker-compose-ueransim-vpp_sli…
+
+docker-compose-ueransim-vpp_slice1_2.yaml
+UERANSIM deployment for Education Slice domain B. 
+
+docker-compose-ueransim-vpp_sli…
+
+docker-compose-ueransim-vpp_slice2.yaml
+UERANSIM deployment for the Telemedicine Slice.
