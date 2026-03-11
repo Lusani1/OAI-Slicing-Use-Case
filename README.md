@@ -1,9 +1,12 @@
+
 # OAI-Slicing-Use-Case
 
 Practical OpenAirInterface 5G Core network slicing use case using a **shared control plane**, **multiple SMFs**, **multiple VPP-based UPFs**, and **UERANSIM-based gNB/UE emulation** for distributed service domains. The scenario demonstrates how a central 5G core can support multiple slices with slice-specific DNNs, subnets, and user-plane anchoring. 
 ## Architecture Overview
 
 This repository implements a slicing scenario aligned to the attached architecture:
+<img width="973" height="518" alt="Screenshot from 2026-03-11 10-51-48" src="https://github.com/user-attachments/assets/f8153f24-4d9d-47ad-9d1f-aa5193720c39" />
+
 
 - A **shared control plane** hosted in a central data centre
 - An **Education Slice** spanning two access domains
