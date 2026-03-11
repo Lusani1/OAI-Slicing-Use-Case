@@ -29,6 +29,7 @@ The shared core includes:
 - `oai-udr`
 - `oai-smf`
 - `oai-smf2`
+---
 The config for the shared control plane is `shared_control_functions.yaml`
   
 ### User plane
