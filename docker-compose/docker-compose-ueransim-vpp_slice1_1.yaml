@@ -10,10 +10,10 @@ services:
             - MNC=95
             - NCI=0x000000010
             - TAC=0xa000
-            - LINK_IP=192.168.70.141
-            - NGAP_IP=192.168.70.141
-            - GTP_IP=192.168.72.141
-            - NGAP_PEER_IP=192.168.70.132
+            - LINK_IP=192.168.40.141
+            - NGAP_IP=192.168.40.141
+            - GTP_IP=192.168.42.141
+            - NGAP_PEER_IP=192.168.90.132
             - SST=1
             - SD=1
             - IGNORE_STREAM_IDS=true
@@ -26,7 +26,7 @@ services:
             - AMF_VALUE=8000
             - IMEI=356938035643803
             - IMEI_SV=0035609204079514
-            - GNB_IP_ADDRESS=192.168.70.141
+            - GNB_IP_ADDRESS=192.168.40.141
             - PDU_TYPE=IPv4
             - APN=default
             - SST_0=1
@@ -37,9 +37,9 @@ services:
             - SD_D=1
         networks:
             public_net:
-                ipv4_address: 192.168.70.141
+                ipv4_address: 192.168.40.141
             public_net_access:
-                ipv4_address: 192.168.72.141
+                ipv4_address: 192.168.42.141
         healthcheck:
             test: /bin/bash -c "ifconfig uesimtun0"
             interval: 10s
