@@ -2,7 +2,7 @@ version: '3.8'
 services:
     ueransim:
         container_name: ueransim
-        image: ueransim:latest
+        image: free5gc/ueransim:latest
         privileged: true
         environment:
             # GNB Congig Parameters
