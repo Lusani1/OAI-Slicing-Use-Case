@@ -19,7 +19,7 @@ services:
             retries: 30
         networks:
             public_net:
-                ipv4_address: 192.168.70.131
+                ipv4_address: 192.168.90.131
     oai-udr:
         container_name: "oai-udr"
         image: oaisoftwarealliance/oai-udr:v2.1.0
@@ -35,7 +35,7 @@ services:
             - oai-nrf
         networks:
             public_net:
-                ipv4_address: 192.168.70.136
+                ipv4_address: 192.168.90.136
     oai-udm:
         container_name: "oai-udm"
         image: oaisoftwarealliance/oai-udm:v2.1.0
@@ -50,7 +50,7 @@ services:
             - oai-nrf
         networks:
             public_net:
-                ipv4_address: 192.168.70.137
+                ipv4_address: 192.168.90.137
     oai-ausf:
         container_name: "oai-ausf"
         image: oaisoftwarealliance/oai-ausf:v2.1.0
@@ -65,7 +65,7 @@ services:
             - oai-nrf
         networks:
             public_net:
-                ipv4_address: 192.168.70.138
+                ipv4_address: 192.168.90.138
     oai-nrf:
         container_name: "oai-nrf"
         image: oaisoftwarealliance/oai-nrf:v2.1.0
@@ -78,7 +78,7 @@ services:
             - TZ=Europe/Paris
         networks:
             public_net:
-                ipv4_address: 192.168.70.130
+                ipv4_address: 192.168.90.130
     oai-amf:
         container_name: "oai-amf"
         image: oaisoftwarealliance/oai-amf:v2.1.0
@@ -94,7 +94,7 @@ services:
             - oai-nrf
         networks:
             public_net:
-                ipv4_address: 192.168.70.132
+                ipv4_address: 192.168.90.132
 #    oai-smf:
 #        container_name: "oai-smf"
 #        image: oaisoftwarealliance/oai-smf:v2.1.0
@@ -112,7 +112,7 @@ services:
 #            - oai-nrf
 #        networks:
 #            public_net:
-#                ipv4_address: 192.168.70.133
+#                ipv4_address: 192.168.90.133
 
 
 networks:
@@ -121,35 +121,35 @@ networks:
         name: demo-oai-public-net
         ipam:
             config:
-                - subnet: 192.168.70.0/24
+                - subnet: 192.168.90.0/24
         driver_opts:
             com.docker.network.bridge.name: "demo-oai"
-    public_net_access:
-        name: oai-public-access
-        ipam:
-            config:
-                - subnet: 192.168.72.0/24
-        driver_opts:
-            com.docker.network.bridge.name: "cn5g-access"
-    public_net_core:
-        name: oai-public-core
-        ipam:
-            config:
-                - subnet: 192.168.73.0/24
-        driver_opts:
-            com.docker.network.bridge.name: "cn5g-core"
-    public_net_access2:
-        name: oai-public-access2
-        ipam:
-            config:
-                - subnet: 192.168.74.0/24
-        driver_opts:
-            com.docker.network.bridge.name: "cn5g-access2"
+#    public_net_access:
+#        name: oai-public-access
+#        ipam:
+#            config:
+#                - subnet: 192.168.72.0/24
+#        driver_opts:
+#            com.docker.network.bridge.name: "cn5g-access"
+#    public_net_core:
+#        name: oai-public-core
+#        ipam:
+#            config:
+#                - subnet: 192.168.73.0/24
+#        driver_opts:
+#            com.docker.network.bridge.name: "cn5g-core"
+#    public_net_access2:
+#        name: oai-public-access2
+#        ipam:
+#            config:
+#                - subnet: 192.168.74.0/24
+#        driver_opts:
+#            com.docker.network.bridge.name: "cn5g-access2"
 
-    public_net_access3:
-        name: oai-public-access3
-        ipam:
-            config:
-                - subnet: 192.168.75.0/24
-        driver_opts:
-            com.docker.network.bridge.name: "cn5g-access3"
+#    public_net_access3:
+#        name: oai-public-access3
+#       ipam:
+#            config:
+#                - subnet: 192.168.75.0/24
+#        driver_opts:
+#            com.docker.network.bridge.name: "cn5g-access3"
