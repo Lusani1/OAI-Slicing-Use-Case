@@ -45,7 +45,7 @@ http_version: 2
 ### Each NF takes its local SBI interfaces and remote interfaces from here, unless it gets them using NRF discovery mechanisms
 nfs:
   smf:
-    host: oai-smf
+    host: 192.168.90.130
     sbi:
       port: 8080
       api_version: v1
