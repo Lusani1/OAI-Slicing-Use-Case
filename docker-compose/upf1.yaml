@@ -39,11 +39,11 @@ services:
             retries: 5
         networks:
             public_net:
-                ipv4_address: 192.168.80.134
+                ipv4_address: 192.168.80.201
             public_net_access:
-                ipv4_address: 192.168.82.134
+                ipv4_address: 192.168.82.201
             public_net_core:
-                ipv4_address: 192.168.83.134
+                ipv4_address: 192.168.83.201
 
 networks:
     public_net:
