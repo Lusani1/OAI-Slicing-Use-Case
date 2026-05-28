@@ -55,7 +55,7 @@ networks:
         driver_opts:
             com.docker.network.bridge.name: "demo-oai"
     public_net_access:
-        public_net_access:
+        driver: bridge
         name: oai-public-access
         ipam:
             config:
