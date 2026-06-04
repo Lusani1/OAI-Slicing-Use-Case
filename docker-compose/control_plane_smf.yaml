@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+    oai-smf:
+        container_name: "oai-smf"
+        image: oaisoftwarealliance/oai-smf:v2.1.0
+        expose:
+            - 80/tcp
+            - 8080/tcp
+            - 8805/udp
+        volumes:
+            - ./conf/basic_vpp_nrf_config_slice1.yaml:/openair-smf/etc/config.yaml
+        environment:
+            - TZ=Europe/Paris
+        extra_hosts:
+#            - "vpp-upf2.node.5gcn.mnc95.mcc208.3gppnetwork.org:192.168.70.202"
+            - "vpp-upf.node.5gcn.mnc95.mcc208.3gppnetwork.org:192.168.80.201"
+        networks:
+            public_net:
+                ipv4_address: 192.168.60.133
+
+networks:
+    public_net:
+        driver: bridge
+        name: demo-oai-public-net
+        ipam:
+            config:
+                - subnet: 192.168.60.0/24
+        driver_opts:
+            com.docker.network.bridge.name: "demo-oai"
