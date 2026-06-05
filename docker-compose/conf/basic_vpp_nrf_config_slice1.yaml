@@ -55,7 +55,7 @@ nfs:
       port: 8805
 
   nrf:
-    host: 192.168.90.132
+    host: 192.168.90.130
     sbi:
       port: 8080
       api_version: v1
