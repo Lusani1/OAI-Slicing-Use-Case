@@ -80,9 +80,9 @@ smf:
       config:
         enable_usage_reporting: yes
 
-    - host: vpp-upf2.node.5gcn.mnc95.mcc208.3gppnetwork.org
-      config:
-        enable_usage_reporting: yes
+  #  - host: vpp-upf2.node.5gcn.mnc95.mcc208.3gppnetwork.org
+  #    config:
+  #      enable_usage_reporting: yes
 
 
   ue_dns:
