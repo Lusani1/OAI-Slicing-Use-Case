@@ -4,7 +4,7 @@ services:
         container_name: "mysql"
         image: mysql:8.0
         volumes:
-            - ./database/oai_db2.sql:/docker-entrypoint-initdb.d/oai_db.sql
+            - ./database/oai_db3.sql:/docker-entrypoint-initdb.d/oai_db.sql
             - ./healthscripts/mysql-healthcheck2.sh:/tmp/mysql-healthcheck.sh
         environment:
             - TZ=Europe/Paris
@@ -27,7 +27,7 @@ services:
             - 80/tcp
             - 8080/tcp
         volumes:
-            - ./conf/basic_vpp_nrf_config.yaml:/openair-udr/etc/config.yaml
+            - ./conf/vpp_config.yaml:/openair-udr/etc/config.yaml
         environment:
             - TZ=Europe/Paris
         depends_on:
@@ -43,7 +43,7 @@ services:
             - 80/tcp
             - 8080/tcp
         volumes:
-            - ./conf/basic_vpp_nrf_config.yaml:/openair-udm/etc/config.yaml
+            - ./conf/vpp_config.yaml:/openair-udm/etc/config.yaml
         environment:
             - TZ=Europe/Paris
         depends_on:
@@ -58,7 +58,7 @@ services:
             - 80/tcp
             - 8080/tcp
         volumes:
-            - ./conf/basic_vpp_nrf_config.yaml:/openair-ausf/etc/config.yaml
+            - ./conf/vpp_config.yaml:/openair-ausf/etc/config.yaml
         environment:
             - TZ=Europe/Paris
         depends_on:
@@ -73,7 +73,7 @@ services:
             - 80/tcp
             - 8080/tcp
         volumes:
-            - ./conf/basic_vpp_nrf_config.yaml:/openair-nrf/etc/config.yaml
+            - ./conf/vpp_config.yaml:/openair-nrf/etc/config.yaml
         environment:
             - TZ=Europe/Paris
         networks:
@@ -87,7 +87,7 @@ services:
             - 8080/tcp
             - 38412/sctp
         volumes:
-            - ./conf/basic_vpp_nrf_config.yaml:/openair-amf/etc/config.yaml
+            - ./conf/vpp_config.yaml:/openair-amf/etc/config.yaml
         environment:
             - TZ=Europe/Paris
         depends_on:
