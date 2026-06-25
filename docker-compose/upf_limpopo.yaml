@@ -24,8 +24,8 @@ services:
             - VPP_CORE_WORKER=1
 #           - VPP_PLUGIN_PATH=/usr/lib64/vpp_plugins/                # RHEL7
             - VPP_PLUGIN_PATH=/usr/lib/x86_64-linux-gnu/vpp_plugins/ # Ubuntu18.04
-            - SNSSAI_SD=000001
-            - SNSSAI_SST=1
+            - SNSSAI_SD=00007B
+            - SNSSAI_SST=222
             - DNN=default
             - REGISTER_NRF=yes
             - NRF_IP_ADDR=192.168.90.130
@@ -67,11 +67,11 @@ services:
 
         networks:
             public_net:
-                ipv4_address: 192.168.80.201
+                ipv4_address: 192.168.80.134
             public_net_access:
-                ipv4_address: 192.168.82.201
+                ipv4_address: 192.168.82.134
             public_net_core:
-                ipv4_address: 192.168.83.201
+                ipv4_address: 192.168.83.134
 
 networks:
     public_net:
